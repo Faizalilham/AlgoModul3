@@ -13,14 +13,12 @@ public class Project1 {
         System.out.println();
         System.out.println("Masukkan Nama Yang mau anda cari : ");
         A = key.nextLine();
-        for (int i = 0; i <= Data.length; i++) {
+        for (int i = 0; i < Data.length; i++) {
             if(A.equalsIgnoreCase(Data[i])){
                 ketemu = true;
                 System.out.println("Nama "+A+" Berada di index ke "+i+" baris ke "+(i+1));
                 break;
-            } else{       
-                break;
-            }
+            } 
         }
         if (ketemu == true){
             System.out.println("Kesimpulan : Data ditemukan ");
