@@ -2,28 +2,33 @@ package ProjectModul3;
 import java.util.Scanner;
 public class Project1 {
     public static void main(String[] args) {
-        int A ;
-        int Data [] = {2,4,6,8,10,12,14,16,18,20};
-        int ketemu = 0;
+        String A ;
+        String Data [] = {"Galileo","Archimedes","Alkhawarizmi","Aljabar","Faizal","Tesla"};
+        boolean ketemu = false;
         Scanner key = new Scanner(System.in);
-        System.out.println("Data = ");
-         for (int i = 0; i < Data.length; i++) {
+        System.out.println("Data : ");
+        for (int i = 0; i < Data.length; i++) {
             System.out.print(Data[i]+" ");
         }
         System.out.println();
-        System.out.println("Masukkan Angka Yang mau anda cari : ");
-        A = key.nextInt();
-        for (int i = 0; i < Data.length; i++) {
-            if(Data[i] == A){
-                ketemu = 1;
-                System.out.println(" Data ke "+A+" Berada di indeks ke "+i);
-            } 
+        System.out.println("Masukkan Nama Yang mau anda cari : ");
+        A = key.nextLine();
+        for (int i = 0; i <= Data.length; i++) {
+            if(A.equalsIgnoreCase(Data[i])){
+                ketemu = true;
+                System.out.println("Nama "+A+" Berada di index ke "+i+" baris ke "+(i+1));
+                break;
+            } else{       
+                break;
+            }
         }
-        if(ketemu == 1){
-            System.out.println("Data Telah Ditemukan");
+        if (ketemu == true){
+            System.out.println("Kesimpulan : Data ditemukan ");
         }else{
-            System.out.println("Data Tidak Ditemukan");
+            System.out.println("Kesimpulan : Data Tidak ditemukan");
+            
         }
+       
         System.out.println("\n");
         System.out.println("Moh.Faizal Ilham Falakh");
         
