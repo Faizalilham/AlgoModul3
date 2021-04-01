@@ -29,6 +29,7 @@ public class Project2 {
                 }else{
                     System.out.println("Cari di kanan");
                     batasAwal = point +1;
+                    
                 }
             }
         }
